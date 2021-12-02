@@ -1,0 +1,76 @@
+swagger: "2.0"
+info:
+  description: This is the swagger file that goes with our server code
+  version: "1.0.0"
+  title: Swagger Rest Article
+consumes:
+  - application/json
+produces:
+  - application/json
+
+basePath: /api
+
+# Paths supported by the server application
+
+paths:
+  /asaren/{Barcode_ID}:
+    get:
+      operationId: asaren.read_one
+      tags:
+        - People
+      summary: Read one person
+      description: Read one person
+      parameters:
+        - name: Barcode_ID
+          in: path
+          description: Id of the person to get
+          type: string
+          required: True
+      responses:
+        200:
+          description: Successfully read person from people data operation
+          schema:
+            type: object
+            properties:
+              Barcode:
+                type: string
+                description: Id of the person
+              Name:
+                type: string
+                description: First name of the person
+              Age:
+                type: integer
+                description: Age of the person
+              Date:
+                type: string
+                description: Creation/Update timestamp of the person record
+              Gender:
+                type: string
+                description: Gender of the person
+              Benf_id:
+                type: string
+                description: First name of the person
+              Ehr_id:
+                type: string
+                description: First name of the person
+              Visit_id:
+                type: string
+                description: First name of the person
+              Payment_status:
+                type: string
+                description: First name of the person
+              Hra_status:
+                type: string
+                description: First name of the person
+              Member_id:
+                type: integer
+                description: First name of the person
+              email_id:
+                type: string
+                description: First name of the person
+              language:
+                type: string
+                description: First name of the person
+              v2:
+                type: string
+                description: First name of the person
